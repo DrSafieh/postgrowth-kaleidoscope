@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post-Growth Kaleidoscope</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Inter Font */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        /* Custom styles for active button and transitions */
+        .facet-btn {
+            transition: all 0.3s ease-in-out;
+            padding: 0.75rem 1.5rem; /* Tailwind p-3 px-6 */
+            border-radius: 0.5rem; /* Tailwind rounded-lg */
+            font-weight: 500; /* Tailwind font-medium */
+            color: #374151; /* Tailwind text-gray-700 */
+            background-color: #F3F4F6; /* Tailwind bg-gray-100 */
+            border: 2px solid transparent;
+        }
+        .facet-btn:hover {
+            background-color: #E5E7EB; /* Tailwind bg-gray-200 */
+            border-color: #047857; /* Tailwind border-teal-600 */
+        }
+        .active-facet-btn {
+            background-color: #065F46; /* Tailwind bg-teal-800 */
+            color: white;
+            border-color: #065F46; /* Tailwind border-teal-800 */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .facet-content {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        /* Styling for list items */
+        .facet-content ul {
+            list-style-type: none; /* Remove default bullets */
+            padding-left: 0;
+        }
+        .facet-content ul li {
+            background-color: #F9FAFB; /* Tailwind bg-gray-50 */
+            border-left: 4px solid #10B981; /* Tailwind border-l-4 border-emerald-500 */
+            padding: 0.75rem 1rem; /* Tailwind p-3 pl-4 */
+            margin-bottom: 0.5rem; /* Tailwind mb-2 */
+            border-radius: 0.375rem; /* Tailwind rounded-md */
+            color: #374151; /* Tailwind text-gray-700 */
+        }
+        .facet-content ul li::before {
+            content: "💠"; /* Using a diamond emoji as a custom bullet */
+            margin-right: 0.5rem; /* Tailwind mr-2 */
+            color: #10B981; /* Tailwind text-emerald-500 */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+
+    <div class="container mx-auto max-w-4xl p-4 md:p-8 font-inter bg-white rounded-xl shadow-2xl my-8">
+        <header class="text-center mb-10">
+            <h1 class="text-3xl md:text-5xl font-bold text-teal-700 mb-3">
+                A Post-Growth Kaleidoscope <span class="text-2xl md:text-4xl">🌀</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-700 mb-4">
+                Shifting Perspectives on Prosperity & Our Planet
+            </p>
+            <p class="text-sm text-gray-500 italic">
+                An interactive exploration inspired by "Post-growth: the science of wellbeing within planetary boundaries" by Kallis et al. (2025), <i>The Lancet Planetary Health</i>.
+            </p>
+        </header>
+
+        <div class="kaleidoscope-container bg-slate-50 p-4 md:p-6 rounded-lg shadow-lg">
+            <nav class="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-3 md:gap-4 mb-8 pb-6 border-b-2 border-teal-100">
+                <button id="facet1-btn" class="facet-btn active-facet-btn w-full sm:w-auto">
+                    <span class="text-lg">⚙️</span> New Economic Models
+                </button>
+                <button id="facet2-btn" class="facet-btn w-full sm:w-auto">
+                    <span class="text-lg">🔗</span> Untangling Growth
+                </button>
+                <button id="facet3-btn" class="facet-btn w-full sm:w-auto">
+                    <span class="text-lg">🌱</span> Policies for Wellbeing
+                </button>
+            </nav>
+
+            <div id="facet1-content" class="facet-content">
+                <h2 class="text-2xl font-semibold text-teal-600 mb-4">Facet 1: Beyond GDP – Crafting New Economic Models</h2>
+                <p class="text-gray-700 mb-4 leading-relaxed">
+                    The first turn of our kaleidoscope reveals groundbreaking work in developing <strong>ecological macroeconomic models</strong>. These aren't your typical growth-focused spreadsheets! They offer a new lens to see how economies can function sustainably.
+                </p>
+                <ul class="space-y-3 mb-4">
+                    <li><strong>Core Idea:</strong> Scientists are building sophisticated models (like LowGrow SFC for Canada and Eurogreen for France) that weave together economic activity, social wellbeing, and crucial ecological limits.</li>
+                    <li><strong>Testing New Paths:</strong> These models allow researchers to simulate and test policies for managing economies *without* chasing relentless GDP growth.</li>
+                    <li><strong>Climate & Social Wins:</strong> Simulations indicate that pathways with lower or no growth can lead to significantly better climate outcomes (e.g., reduced emissions).</li>
+                    <li><strong>Wellbeing Without Endless Growth:</strong> Crucially, these models demonstrate that good social outcomes – like full employment, reduced inequality, and stable public finances – are achievable through smart policies. This includes things like reducing working hours, implementing job guarantees, and strategically investing in green sectors.</li>
+                    <li><strong>Challenging Old Assumptions:</strong> This research fundamentally challenges the long-held belief that continuous economic growth is the only route to societal stability and prosperity.</li>
+                </ul>
+                <p class="text-gray-600 italic text-sm">This facet shows a tangible way to map out a future where stability and wellbeing don't depend on the endless growth treadmill.</p>
+            </div>
+
+            <div id="facet2-content" class="facet-content hidden">
+                <h2 class="text-2xl font-semibold text-teal-600 mb-4">Facet 2: Breaking Free – Untangling Growth Dependencies</h2>
+                <p class="text-gray-700 mb-4 leading-relaxed">
+                    This view explores how our current systems are deeply intertwined with the expectation of continuous economic growth, and how researchers are working to understand and loosen these "growth dependencies."
+                </p>
+                 <ul class="space-y-3 mb-4">
+                    <li><strong>Systemic Reliance:</strong> Many vital societal functions, such as welfare systems (pensions, healthcare, education), employment stability, and public service funding, are currently structured as if constant GDP growth is essential to sustain them.</li>
+                    <li><strong>Growth Imperatives:</strong> The paper delves into whether capitalist economies have inherent "growth imperatives"—mechanisms like relentless competition or the nature of interest-bearing debt—that make it difficult for individuals, firms, or even nations to step off the growth path.</li>
+                    <li><strong>The Politics of Growth:</strong> Research uncovers the "political hegemony of growth"—how increasing GDP became a dominant, almost unquestioned, political objective, often used as a way to manage or deflect conflicts over resource distribution.</li>
+                    <li><strong>Funding the Future:</strong> A key question is how to finance essential social services and maintain institutional stability if the economy isn't constantly expanding. This is particularly relevant for sectors like social care, especially with aging populations and pressures from privatisation.</li>
+                    <li><strong>Pathways to Independence:</strong> The goal is to identify institutional and political shifts that can reduce these dependencies, allowing societies to prioritize wellbeing and ecological health over mere quantitative expansion.</li>
+                </ul>
+                <p class="text-gray-600 italic text-sm">This facet reveals the deep roots of our growth-based system and points towards the systemic changes needed for a post-growth transition.</p>
+            </div>
+
+            <div id="facet3-content" class="facet-content hidden">
+                <h2 class="text-2xl font-semibold text-teal-600 mb-4">Facet 3: Thriving Together – Policies & Provisioning for Wellbeing</h2>
+                <p class="text-gray-700 mb-4 leading-relaxed">
+                    Our final pattern illuminates innovative thinking around policies and "provisioning systems" designed to achieve high levels of human wellbeing for all, while drastically reducing our resource use to stay within planetary boundaries.
+                </p>
+                <ul class="space-y-3 mb-4">
+                    <li><strong>Meeting Needs Differently:</strong> "Provisioning systems" are the complex webs of infrastructure (transport, housing), institutions (markets, government), and cultural norms that determine how we meet human needs. The focus shifts to designing these systems for sufficiency and direct wellbeing.</li>
+                    <li><strong>Universal Basic Services:</strong> A cornerstone proposal is ensuring universal access to essential services like quality healthcare, education, affordable housing, public transit, and nutritious food. This decouples basic security from individual income fluctuations.</li>
+                    <li><strong>Smarter Work-Life:</strong> Reducing statutory working hours (e.g., a 4-day week without loss of pay) is explored for its potential to improve wellbeing, redistribute productivity gains, and possibly lessen environmental pressures.</li>
+                    <li><strong>Meaningful Employment:</strong> Job guarantee programs could direct labor towards socially and ecologically beneficial activities, ensuring employment while contributing to a healthier society and planet.</li>
+                    <li><strong>Fairness & Incentives:</strong> Policies like progressive wealth taxes and carbon taxes (ideally with revenues returned as dividends to citizens) are discussed to promote equity and incentivize shifts away from harmful consumption and production.</li>
+                    <li><strong>Evidence for Change:</strong> Research shows that some countries already achieve high social outcomes with lower resource use than others. Furthermore, modeling suggests that providing decent living standards for a global population of 10 billion is feasible within a 1.5°C energy budget, provided we make systemic changes to how we provision for needs.</li>
+                </ul>
+                <p class="text-gray-600 italic text-sm">This facet showcases concrete pathways to a future where human flourishing is prioritized within the Earth's ecological limits.</p>
+            </div>
+        </div>
+
+        <footer class="text-center mt-10 pt-8 border-t-2 border-teal-100">
+            <h2 class="text-2xl md:text-3xl font-semibold text-teal-700 mb-4">The Interconnected Whole</h2>
+            <p class="text-gray-700 mb-4 leading-relaxed max-w-2xl mx-auto">
+                Like a true kaleidoscope, these different facets of post-growth research are not isolated. They merge to form a coherent and hopeful picture: a future where human wellbeing and planetary health are not competing goals, but deeply interconnected pursuits.
+            </p>
+            <p class="text-gray-700 mb-3 leading-relaxed max-w-2xl mx-auto">
+                This emerging field isn't about "going backwards" or sacrificing quality of life. Instead, it's about intelligently and equitably redesigning our economies and societies to be truly sustainable and to allow everyone to flourish.
+            </p>
+            <p class="text-gray-600 text-sm mb-6 italic">
+                This interactive piece is an interpretation. For a comprehensive understanding, we encourage you to read the full review: Kallis, G., Hickel, J., O'Neill, D.W., et al. (2025). Post-growth: the science of wellbeing within planetary boundaries. <i>The Lancet Planetary Health</i>.
+            </p>
+            <div class="bg-teal-50 p-6 rounded-lg shadow-md">
+                <p class="text-xl font-medium text-teal-800 mb-3">What patterns do YOU see for a post-growth world?</p>
+                <p class="text-gray-700">Share your thoughts, questions, and insights in the comments on LinkedIn!</p>
+                <p class="mt-4 text-teal-600 font-semibold">
+                    #PostGrowth #WellbeingEconomy #SustainableFutures #PlanetaryBoundaries #NewEconomics #SystemsThinking #ClimateAction #LinkedInNewsletter
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Get all facet buttons and content divs
+        const facetButtons = document.querySelectorAll('.facet-btn');
+        const facetContents = document.querySelectorAll('.facet-content');
+
+        // Add event listeners to buttons
+        facetButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Get the target content ID from the button's ID
+                // e.g., "facet1-btn" targets "facet1-content"
+                const targetContentId = button.id.replace('-btn', '-content');
+                
+                // Update button active states
+                facetButtons.forEach(btn => {
+                    btn.classList.remove('active-facet-btn');
+                });
+                button.classList.add('active-facet-btn');
+
+                // Show/hide content panes
+                facetContents.forEach(content => {
+                    if (content.id === targetContentId) {
+                        content.classList.remove('hidden');
+                    } else {
+                        content.classList.add('hidden');
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
